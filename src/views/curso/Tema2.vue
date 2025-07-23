@@ -206,7 +206,7 @@
         figure.mb-4.mb-lg-0
           img.mx-auto(src="@/assets/curso/tema2/15.png",style="max-width: 400px;")
 
-    .row
+    .row.mb-4
       .col-lg-4
         figure.mb-4.mb-lg-0
           img.mx-auto(src="@/assets/curso/tema2/16.png",style="max-width: 400px;")
@@ -220,22 +220,32 @@
             p.mb-0 Además, la toma de decisiones colaborativa promueve el compromiso y la cohesión en la organización, asegurando que las estrategias formuladas se implementen de manera efectiva y alineada con los objetivos organizacionales.
 
 
+            
+            
+            
+    .bg-full-width.border-top.color-primario
+      .p-4.p-md-5
+        h2 MATERIAL COMPLEMENTARIO
+        .row.material-complementario
+          .col-12.col-md-6.col-lg-7
+            p Los invitamos a explorar el material complementario de este curso, en esta sección encontrará recursos que le permitirán profundizar  y enriquecer su aprendizaje en los temas tratados en esta unidad.
+
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://elibro.net/es/ereader/tecnologicadeloriente/271461" target="_blank" rel="noopener noreferrer") Abad, F. (Coord.). (2014). Dentro de 15 años: ¿Escenarios improbables?. LID Editorial España.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/icono-yt.svg' :style="{'max-width':'16px'}")
+              a(href="https://youtu.be/bsm2KsyQmC0?si=cXHsB4BDzhTdUC62" target="_blank" rel="noopener noreferrer") Bayly K. (2023, 3 de mayo). Alfabetización financiera para desarrollar competencias de pensamiento complejo en emprendedoras. [video] YouTube.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://marketingbyali.com/es/how-systems-thinking-transforms-your-marketing-approach/" target="_blank" rel="noopener noreferrer") Ghasemirad (2025) Cómo el pensamiento sistémico transforma su estrategia de marketing Marketingbyali.
+
+          .col-12.col-md-6.col-lg-3.offset-lg-1
+            figure
+              img(src='@/assets/componentes/material-complementario.svg', alt='')
+
 
 </template>
-
-<script>
-import BannerInterno from '../../components/plantilla/BannerInterno'
-export default {
-  name: 'Tema2',
-  components: {
-    BannerInterno,
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.$aosRefresh()
-    })
-  },
-}
-</script>
-
-<style lang="sass"></style>

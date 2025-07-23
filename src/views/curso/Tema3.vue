@@ -107,7 +107,7 @@
 
     p.mb-4 Una característica clave de la toma de decisiones en entornos inciertos, es la necesidad de una evaluación continua y una retroalimentación. Esto implica monitorear los resultados de las decisiones y realizar ajustes conforme se desarrolla el contexto. La capacidad de aprendizaje organizacional, es fundamental para mejorar la toma de decisiones y minimizar errores futuros (Chávez Martínez, 2003).
 
-    .row
+    .row.mb-5
       .col-lg-4
         figure.mb-4.mb-lg-0
           img.mx-auto(src="@/assets/curso/tema3/11.png",style="max-width: 400px;")
@@ -121,16 +121,217 @@
               p.mb-0 #[b Ejemplo práctico: decisiones estratégicas en una crisis.] Durante la pandemia del COVID-19, muchas empresas tuvieron que tomar decisiones estratégicas bajo condiciones de extrema incertidumbre. Organizaciones que utilizaron análisis de escenarios, pudieron responder rápidamente a los cambios del mercado, ajustando sus modelos de negocio y adoptando nuevas tecnologías para continuar operando.
         p.mb-0 La toma de decisiones estratégicas en entornos inciertos, es un proceso complejo que requiere preparación, flexibilidad y herramientas adecuadas para minimizar riesgos y aprovechar oportunidades. El uso de metodologías como el análisis de escenarios, junto con la evaluación continua, permite a los líderes tomar decisiones más informadas y resilientes, maximizando las posibilidades de éxito en un entorno dinámico.
 
-     
+
+    .bg-full-width.border-top.actividad.bg-color-actividad.mb-0
+      .p-4.p-md-5
+        #Actividad                
+          <Actividad :cuestionario="cuestionario"/>
+
+    .bg-full-width.border-top.color-primario
+      .p-4.p-md-5
+        h2 MATERIAL COMPLEMENTARIO
+        .row.material-complementario
+          .col-12.col-md-6.col-lg-7
+            p Los invitamos a explorar el material complementario de este curso, en esta sección encontrará recursos que le permitirán profundizar  y enriquecer su aprendizaje en los temas tratados en esta unidad.
+
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://edgarmorinmultiversidad.org/index.php/descarga-la-via-para-el-futuro-de-la-humanidad.html" target="_blank" rel="noopener noreferrer") Morin, E. (2008). La Vía: Para el futuro de la humanidad. Ediciones Seuil.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/icono-yt.svg' :style="{'max-width':'16px'}")
+              a(href="https://youtu.be/glUQMVgvX8Y?si=tBCHmYnbuf4Ft8uX" target="_blank" rel="noopener noreferrer") EOI. (2013, 11 de abril) Prospectiva Tecnológica: una herramienta para reducir la incertidumbre. [Video] YouTube.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://kendocorp.com/blog/administrar-mi-negocio/la-toma-de-decisiones-en-entornos-de-incertidumbre" target="_blank" rel="noopener noreferrer") Santodomingo J. (2020) La toma de decisiones en entornos de incertidumbre.
+
+          .col-12.col-md-6.col-lg-3.offset-lg-1
+            figure
+              img(src='@/assets/componentes/material-complementario.svg', alt='')
 
 </template>
 
 <script>
-import BannerInterno from '../../components/plantilla/BannerInterno'
+import Actividad from '@/components/actividad/Actividad.vue'
 export default {
   name: 'Tema3',
   components: {
-    BannerInterno,
+    Actividad,
+  },
+  data() {
+    return {
+      cuestionario: {
+        tema: 'Pensamiento estratégico y prospectivo',
+        titulo: 'Ponte a prueba',
+        introduccion:
+          'Demuestra lo que aprendiste en esta unidad y pon a prueba tus conocimientos.',
+        barajarPreguntas: true,
+        preguntas: [
+          {
+            id: 1,
+            texto: '¿Qué características describen mejor el entorno VUCA?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Volatilidad, Uniformidad, Colaboración, Adaptación',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Volatilidad, Incertidumbre, Complejidad, Ambigüedad',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto: 'Variabilidad, Unidad, Conectividad, Análisis',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto: 'Complejidad e Incertidumbre',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto:
+              '¡Correcto! El entorno VUCA se caracteriza por Volatilidad, Incertidumbre, Complejidad y Ambigüedad.',
+            mensaje_incorrecto:
+              'Incorrecto. Revisa las características principales del entorno VUCA.',
+          },
+          {
+            id: 2,
+            texto:
+              '¿Cuál es la diferencia principal entre estrategia deliberada y emergente?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto:
+                  'La estrategia deliberada es improvisada, mientras que la emergente es planificada.',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto:
+                  'La estrategia deliberada es estructurada y tiene objetivos claros, mientras que la emergente surge de situaciones imprevistas.',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto:
+                  'Ambas son completamente diferentes y no se pueden combinar.',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto:
+                  'La estrategia emergente es exclusiva para grandes organizaciones.',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto:
+              '¡Correcto! La estrategia deliberada es estructurada y la emergente surge de situaciones imprevistas.',
+            mensaje_incorrecto:
+              'Incorrecto. Revisa la diferencia entre estrategia deliberada y emergente.',
+          },
+          {
+            id: 3,
+            texto: '¿Qué significa “pensamiento sistémico”?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Método para resolver problemas financieros.',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto:
+                  'Enfoque que analiza las interrelaciones entre las partes de un sistema.',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto:
+                  'Comprensión de los sistemas como un todo interconectado.',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto:
+                  'Una herramienta exclusiva para líderes organizacionales.',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto:
+              '¡Correcto! El pensamiento sistémico analiza las interrelaciones entre las partes de un sistema.',
+            mensaje_incorrecto:
+              'Incorrecto. Revisa el significado de pensamiento sistémico.',
+          },
+          {
+            id: 4,
+            texto:
+              'Completa: En un entorno dinámico, la estrategia debe ser ________ y ________.',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              { id: 'a', texto: 'Rígida y uniforme.', esCorrecta: false },
+              { id: 'b', texto: 'Adaptativa y flexible.', esCorrecta: true },
+              { id: 'c', texto: 'Estática y detallada.', esCorrecta: false },
+              { id: 'd', texto: 'Sistémica y prospectiva.', esCorrecta: false },
+            ],
+            mensaje_correcto:
+              '¡Correcto! En un entorno dinámico, la estrategia debe ser adaptativa y flexible.',
+            mensaje_incorrecto:
+              'Incorrecto. Revisa las características de la estrategia en entornos dinámicos.',
+          },
+          {
+            id: 5,
+            texto:
+              '¿Cuál de las siguientes ideas refleja el pensamiento complejo?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Análisis lineal y predicción exacta.',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Aceptación de la ambigüedad y la incertidumbre.',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto:
+                  'Reconocer que las interacciones pueden producir resultados no proporcionales.',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto:
+                  'Enfocarse únicamente en los factores internos de la organización.',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto:
+              '¡Correcto! El pensamiento complejo implica la aceptación de la ambigüedad y la incertidumbre.',
+            mensaje_incorrecto:
+              'Incorrecto. Revisa las ideas principales del pensamiento complejo.',
+          },
+        ],
+        mensaje_final_aprobado:
+          '¡Felicidades! Has superado la prueba con éxito.',
+        mensaje_final_reprobado:
+          'Te recomendamos repasar nuevamente la unidad para reforzar los conceptos clave antes de volver a intentarlo.',
+      },
+    }
   },
   mounted() {
     this.$nextTick(() => {
@@ -141,7 +342,6 @@ export default {
 </script>
 
 <style lang="sass">
-.material-complementario
-  padding-top: 3rem
-  border-top: 9px solid $color-sistema-e
+.bg-color-actividad
+  background-color: #EBF1F5
 </style>

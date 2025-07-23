@@ -37,11 +37,36 @@
               .anexo__icono(:style="{'background-color': '#FCDFDB'}")
                 img(src="@/assets/template/icono-pdf.svg")
               .anexo__texto
-                p <strong>Anexo. </strong> Tipos de proyectos
+                p <strong>Anexo. </strong> Estrategia
 
           .col-lg-5
             figure(data-aos="zoom-in")
               img.ms-auto(src='@/assets/curso/tema1/4.png',style="max-width: 400px;")
+
+
+    .bg-full-width.border-top.color-primario
+      .p-4.p-md-5
+        h2 MATERIAL COMPLEMENTARIO
+        .row.material-complementario
+          .col-12.col-md-6.col-lg-7
+            p Los invitamos a explorar el material complementario de este curso, en esta sección encontrará recursos que le permitirán profundizar  y enriquecer su aprendizaje en los temas tratados en esta unidad.
+
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://elibro.net/es/ereader/tecnologicadeloriente/75568" target="_blank" rel="noopener noreferrer") Chávez Martínez, G. (2003). El pensamiento del estratega. Plaza y Valdés.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://open.spotify.com/episode/16kNgba5i2ebIAsiryvAbB?si=602a98ba15da4ae0" target="_blank" rel="noopener noreferrer") Sostenibilidad Empresarial CESA y GRI. (2020). La sostenibilidad es la estrategia – Caso Nutresa [Podcast]. Spotify.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://www.canalrcn.com/co/player/gj0atq" target="_blank" rel="noopener noreferrer") Universidad Cezuma (2025) Pensamiento estratégico: ¿cómo desarrollarlo? [Blog].
+
+          .col-12.col-md-6.col-lg-3.offset-lg-1
+            figure
+              img(src='@/assets/componentes/material-complementario.svg', alt='')
 </template>
 
 <script>
